@@ -1,6 +1,6 @@
 # Task Management System
 
-A secure backend REST API built using Spring Boot for managing tasks with JWT authentication, role-based authorization, pagination, sorting, filtering, caching, Swagger documentation, and clean API architecture.
+A secure and scalable backend REST API built using Spring Boot for managing tasks with JWT authentication, role-based authorization, pagination, filtering, sorting, caching, and Swagger documentation.
 
 ---
 
@@ -8,68 +8,73 @@ A secure backend REST API built using Spring Boot for managing tasks with JWT au
 
 ## Authentication & Security
 
-* JWT Authentication
-* Secure Login & Signup APIs
-* Password Encryption using BCrypt
-* Spring Security Integration
-* Role-Based Access Control (RBAC)
+- JWT Authentication
+- Secure Login & Signup APIs
+- Password Encryption using BCrypt
+- Spring Security Integration
+- Role-Based Access Control (RBAC)
 
 ## Roles
 
-* ADMIN
-* USER
+- ADMIN
+- USER
 
 ## Task Management
 
-* Create Task
-* Update Task
-* Delete Task
-* Get My Tasks
-* Get All Tasks
-* Filtering by Status
-* Pagination
-* Sorting
+- Create Tasks
+- Update Tasks
+- Delete Tasks
+- Personalized Task Access
+- Admin Task Management
+- Filtering by Status
+- Pagination
+- Sorting
 
 ## API Features
 
-* Global Exception Handling
-* Request Validation
-* Standard API Response Structure
-* DTO + Mapper Pattern
-* Dynamic & Class-Based Projection
-* Swagger/OpenAPI Documentation
-* Caching Support
+- Global Exception Handling
+- Request Validation
+- Standard API Response Structure
+- DTO + Mapper Pattern
+- Dynamic & Class-Based Projection
+- Swagger/OpenAPI Documentation
+- Caching Support
+- Layered Architecture
+- Clean Separation of Concerns
 
 ---
 
-# ⚠️ Important Note
+# 🌐 Live API
 
-The **first registered user** in the system is automatically assigned the role:
+## Base URL
 
 ```text
-ADMIN
+https://task-management-system-awh8.onrender.com/api/v1
 ```
 
-All users registered after the first user are assigned:
+## Swagger UI
 
 ```text
-USER
+https://task-management-system-awh8.onrender.com/api/v1/swagger-ui/index.html
 ```
 
 ---
 
 # 🛠️ Tech Stack
 
-* Java
-* Spring Boot
-* Spring Security
-* Spring Data JPA
-* Hibernate
-* MySQL
-* JWT
-* Maven
-* Swagger/OpenAPI
-* Lombok
+- Java
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- Hibernate
+- MySQL
+- JWT
+- Maven
+- Swagger/OpenAPI
+- Lombok
+- REST APIs
+- Postman
+- Git & GitHub
 
 ---
 
@@ -106,9 +111,9 @@ git clone git@github.com:Krish-026/task-management-system.git
 
 Open the project in:
 
-* IntelliJ IDEA
-* VS Code
-* Eclipse
+- IntelliJ IDEA
+- VS Code
+- Eclipse
 
 ---
 
@@ -138,9 +143,9 @@ application.properties
 
 Then add your own:
 
-* database username
-* database password
-* JWT secret
+- Database username
+- Database password
+- JWT secret
 
 ---
 
@@ -182,13 +187,13 @@ Authorization: Bearer <token>
 
 # 📚 Swagger Documentation
 
-Swagger UI:
+## Swagger UI
 
 ```text
 http://localhost:8080/api/v1/swagger-ui/index.html
 ```
 
-API Docs:
+## API Docs
 
 ```text
 http://localhost:8080/api/v1/v3/api-docs
@@ -216,25 +221,22 @@ http://localhost:8080/api/v1/v3/api-docs
 # 🔑 RBAC Rules
 
 | Action         | Allowed Roles                   |
-| -------------- | ------------------------------- |
-| Create Task    | ADMIN                           |
-| Delete Task    | ADMIN                           |
+|----------------|---------------------------------|
+| Create Task    | Authenticated User             |
+| Delete Task    | ADMIN                          |
 | Update Task    | ADMIN / Creator / Assigned User |
-| View All Tasks | ADMIN                           |
-| View My Tasks  | Authenticated User              |
+| View All Tasks | ADMIN                          |
+| View My Tasks  | Authenticated User             |
 
 ---
 
 # 🚀 Future Improvements
 
-* OAuth2 Login
-* Docker Support
-* CI/CD Pipeline
-* Redis Caching
-* Email Notifications
-* File Uploads
-* Unit & Integration Testing
-* Deployment on AWS/Render
+- Docker Support
+- Redis Caching
+- Unit & Integration Testing
+- CI/CD Pipeline
+- AWS Deployment
 
 ---
 
