@@ -46,12 +46,6 @@ A secure and scalable backend REST API built using Spring Boot for managing task
 
 # 🌐 Live API
 
-## Base URL
-
-```text
-https://task-management-system-awh8.onrender.com/api/v1
-```
-
 ## Swagger UI
 
 ```text
