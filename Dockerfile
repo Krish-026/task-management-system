@@ -8,5 +8,5 @@ FROM eclipse-temurin:17-jdk-jammy
 COPY --from=build /target/task-system-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
-# UPDATED LINE BELOW: Passes environment variables directly to Spring Boot
-ENTRYPOINT ["java", "-Dspring.datasource.url=${SPRING_DATASOURCE_URL}", "-Dspring.datasource.username=${SPRING_DATASOURCE_USERNAME}", "-Dspring.datasource.password=${SPRING_DATASOURCE_PASSWORD}", "-jar", "/app.jar"]
+# Clean way to run Spring Boot with Render Environment Variables
+CMD ["java", "-jar", "app.jar"]
